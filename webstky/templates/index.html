@@ -1,54 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Login Page</title>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
 
-  <!-- Bootstrap Stylesheet -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- 
+  Custom Stylesheet -->
+    <link rel="stylesheet" href="./style2.css">
 
-  <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
 </head>
+
 <body>
+    <div class="container">
+        <h1>Login</h1>
+        <br>
+        <input type="email" name="email" placeholder="Username" id="username" required>
+        <input type="password" name="password" placeholder="Password" id="password" required>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> Sign in </button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
 
-<div class="login-wrap">
-  <h2>Login Page</h2>
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="submit" class="close" style="width:30%" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Captcha</h4>
+                    </div>
+                    <div class="modal-body" style="height: 40vh">
+                        <div id="canvasarea" style="display:flex; justify-content:center;">
+                            <canvas id="myCanvas" , style="position:relative; width:38vh; height:38vh">
+                              <img src="../download.jpeg" alt="Image">
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" style="width:20%; font-size:1.5em;">Submit</button>
+                    </div>
+                </div>
 
-  <div class="form">
-    <input type="text" placeholder="Username" name="un" />
-    <input type="password" placeholder="Password" name="pw" />
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" > Sign in </button>
-      <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="submit" class="Submit" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Captcha</h4>
+            </div>
         </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" style="width:20%; font-size:80%" >Submit</button>
-        </div>
-      </div>
-
     </div>
-  </div>
-
-  </div>
-</div>
 
 
-<!-- Align Proper Script -->
-  <script src='https://code.jquery.com/jquery-1.10.0.min.js'></script><script  src="{{url_for('static', filename='js/script.js')}}"></script>
-
+    <!-- Align Proper Script -->
+    <script src='https://code.jquery.com/jquery-1.10.0.min.js'></script>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+    <script src="./script2.js"></script>
 </body>
+
 </html>

@@ -1,9 +1,8 @@
-// vertical align box
-(function(elem){
-    elem.css("margin-top", Math.floor( ( $(window).height() / 2 ) - ( elem.height() / 2 ) ) );
-}($(".login-wrap")));
 
-$(window).resize(function(){
-    $(".login-wrap").css("margin-top", Math.floor( ( $(window).height() / 2 ) - ( $(".login-wrap").height() / 2 ) ) );
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
 
-});
+ctx.fillStyle = "#000000";
+height= window.innerHeight;
+width= window.innerWidth;
+ctx.fillRect(0,0,width, height);

@@ -8,6 +8,9 @@ html {
   background: #FFFFFF;
   font-family: 'Helvetica Neue', Arial, Sans-Serif;
 }
+body{
+	background: linear-gradient(to right, #16bffd, #cb3066);
+}
 html .login-wrap {
   position: relative;
   margin: 0 auto;
