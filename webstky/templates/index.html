@@ -35,25 +35,19 @@
                     </div>
                     <div class="modal-body" style="height: 40vh">
                         <div id="canvasarea" style="display:flex; justify-content:center;">
-                            <canvas id="myCanvas" , style="position:relative; width:38vh; height:38vh">
-                              <img src="../download.jpeg" alt="Image">
-                            </canvas>
+                            <img src="../download.jpeg" alt="Image" style="position:relative; width:38vh; height:38vh">
+                            <canvas id="myCanvas" , style="position:absolute; width:38vh; height:38vh;"></canvas>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" style="width:20%; font-size:1.5em;">Submit</button>
                     </div>
                 </div>
-
             </div>
+            <script src="./script2.js"></script>
         </div>
     </div>
 
-
-    <!-- Align Proper Script -->
-    <script src='https://code.jquery.com/jquery-1.10.0.min.js'></script>
-    <script src="{{url_for('static', filename='js/script.js')}}"></script>
-    <script src="./script2.js"></script>
 </body>
 
 </html>

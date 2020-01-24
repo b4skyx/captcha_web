@@ -97,7 +97,7 @@ function changeBrushStyle(obj) {
 
 //Change line width
 function lineWidthRange() {
-    var widthLine = document.getElementById("myRange").value;
+    var widthLine = document.getElementById(3).value;
     return widthLine;
 };
 
@@ -107,12 +107,12 @@ function erase() {
 };
 
 //Save image
-var button = document.getElementById('dwnld');
-button.addEventListener('click', function(e) {
-    var dataURL = canvas.toDataURL('image/png');
-    button.href = dataURL;
+// var button = document.getElementById('dwnld');
+// button.addEventListener('click', function(e) {
+//     var dataURL = canvas.toDataURL('image/png');
+//     button.href = dataURL;
 
-});
+// });
 
 //Rectangle shape
 function rectangle() {
