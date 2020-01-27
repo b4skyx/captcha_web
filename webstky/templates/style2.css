@@ -14,7 +14,7 @@ h1 {
 }
 
 .container {
-    margin-top: 200px;
+    margin-top: 20px;
 }
 
 .container input[type="email"],
@@ -51,7 +51,7 @@ h1 {
     padding: 14px 25px;
     outline: none;
     color: black;
-    border-radius: 24px;
+    border-radius: 12px;
     transition: 0.25s;
     font-size: 17px;
     font-family: 'Roboto Slab', serif;
@@ -64,4 +64,9 @@ btn:hover {
 
 .close {
     font-size: 4em;
+}
+
+.captcha {
+    width: auto;
+    height: auto;
 }
